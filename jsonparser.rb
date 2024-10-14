@@ -8,7 +8,7 @@ class Jsonparser < Formula
     depends_on "go" => :build
   
     def install
-      system "go", "build", *std_go_args, "main.go"
+      system "go", "build", "-o", bin/"jp", "main.go" # 指定输出文件名为 jp
     end
   
     test do
